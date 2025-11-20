@@ -1,27 +1,26 @@
 buildscript {
-  ext.kotlin_version = '1.2.21'
+  ext.kotlin_version = '1.9.20'
   repositories {
     google()
-    jcenter()
-    maven { url 'https://maven.fabric.io/public' }
+    mavenCentral()
     maven { url 'https://plugins.gradle.org/m2/' }
   }
 
   dependencies {
-    classpath 'com.android.tools.build:gradle:3.2.0-alpha07'
-    classpath "io.fabric.tools:gradle:1.24.5"
+    classpath 'com.android.tools.build:gradle:8.2.0'
     classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-    classpath "net.ltgt.gradle:gradle-errorprone-plugin:0.0.13"
+    classpath "net.ltgt.gradle:gradle-errorprone-plugin:3.1.0"
+    // Note: Fabric Crashlytics removed - will migrate to Firebase Crashlytics later
   }
 }
 
 ext.deps = [
     android: [
         build: [
-            buildToolsVersion: '27.0.3',
-            minSdkVersion    : 14,
-            targetSdkVersion : 27,
-            compileSdkVersion: 27
+            buildToolsVersion: '34.0.0',
+            minSdkVersion    : 21,
+            targetSdkVersion : 34,
+            compileSdkVersion: 34
         ]
     ],
 ]
@@ -29,7 +28,6 @@ ext.deps = [
 allprojects {
   repositories {
     google()
-    jcenter()
-    maven { url 'https://maven.fabric.io/public' }
+    mavenCentral()
   }
 }

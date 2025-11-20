@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           xmlns:tools="http://schemas.android.com/tools"
-          package="com.quran.labs.androidquran"
           android:installLocation="auto">
 
   <uses-permission android:name="android.permission.INTERNET"/>
@@ -11,8 +10,6 @@
 
   <!-- support chromebooks without touch screen -->
   <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
-
-  <uses-sdk tools:overrideLibrary="timber.log"/>
 
   <application
       android:icon="@drawable/icon"
